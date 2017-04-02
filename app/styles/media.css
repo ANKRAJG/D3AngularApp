@@ -1,0 +1,34 @@
+
+
+@media screen and (max-width: 517px){
+
+	.nav-topmost{
+		height: 97px !important;
+	}
+
+	#homepage, #plotChart{
+	    top: 47px;
+	    left: -155px;
+	    position: relative;
+	}
+	#aboutId{
+	    left: -90px;
+	    position: relative;
+	}
+	#contactId{
+		top: 47px;
+	    position: relative;
+	}
+}
+
+@media screen and (max-width: 436px){
+
+	#aboutId{
+		left: 0;
+	    position: relative;
+	}
+	#contactId{
+		top: 0;
+	    position: relative;
+	}
+}

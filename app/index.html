@@ -1,0 +1,77 @@
+<!doctype html>
+<html ng-app="d3ProjectApp">
+  <head>
+    <meta charset="utf-8">
+    <base href="/">
+    <title>D3-App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/custom-style.css">
+    <link rel="stylesheet" href="styles/media.css">
+  </head>
+
+
+  <body class="backgroundHome">
+
+    <div class="container globalContainer">
+  
+        <div class="panel with-nav-tabs panel-primary globalPanel">
+
+          <div class="panel-heading nav-topmost">
+
+
+              <div class="lt-tp-box">
+                <div class="logo-head" ui-sref="home"><strong>D3-Angular-App</strong></div>
+              </div>
+
+
+              <ul class="nav nav-tabs border-remove">
+                <li id="homepage" class="active"><a data-toggle="tab" ui-sref="home" ui-sref-active="active">Home</a></li>
+                <li id="plotChart"><a data-toggle="tab" ui-sref="chart">Chart <span class="caret"></span></a></li>
+
+                <li id="contactId"><a data-toggle="tab" class="note-icon" ui-sref="contact">Contact</a></li>
+                <li id="aboutId"><a data-toggle="tab" class="ques_p" ui-sref="about">About</a></li>
+                <!-- <li id="prof_parent"><a class="profile_p"><img class="prof1" src="images/profile-1.png" /><img class="prof2" src="images/profile-2.png" /></a></li> -->
+              </ul>
+
+          </div>
+
+
+
+          <div class="panel-body" id="appBody">
+              <div class="tab-content">
+                <ui-view></ui-view>
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+
+        <script src="scripts/app.js"></script>
+        <script src="scripts/services/d3Service.js"></script>
+        <script src="scripts/controllers/homeCtrl.js"></script>
+        <script src="scripts/controllers/chartCtrl.js"></script>
+        <script src="scripts/controllers/aboutCtrl.js"></script>
+
+        <script src="scripts/directives/d3Directive.js"></script>
+</body>
+</html>
