@@ -45,6 +45,7 @@ angular.module('d3ProjectApp')
 	            // remove all previous items before render
 				svg.selectAll('*').remove();
 				 
+
 			    // If we don't pass any data, return out of the element
 			    if (!data) return;
 			 
@@ -74,13 +75,20 @@ angular.module('d3ProjectApp')
 			        .attr('y', function(d,i) {
 			          return i * (barHeight + barPadding);
 			        })
-			        .attr('fill', function(d) { return color(d.score); })
+			        .attr('fill', function(d) { 
+			        	if (d.score>20 && d.score<=30) {
+					      return "#f00";
+					    } else if (d.score>10 && d.score<=20) {
+					      return "#ffbf00";
+					    } else if (d.score>=0 && d.score<=10) {
+					    	return "#0f0";
+					    }
+			        })
 			        .transition()
 			          .duration(1000)
 			          .attr('width', function(d) {
 			            return xScale(d.score);
 			          });
-
           }
         });
       }};
