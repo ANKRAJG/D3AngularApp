@@ -39,8 +39,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "karma start test/karma.conf.js",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "test": "karma start test/karma.conf.js"
   },
   "dependencies": {
     "express": "^4.15.2",
