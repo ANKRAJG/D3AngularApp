@@ -117,5 +117,6 @@ ul li {
 }
 
 
-
-
+.jumbotron .h1, .jumbotron h1, .jumbotron p {
+    text-align: center;
+}
